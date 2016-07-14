@@ -29,6 +29,8 @@
 		CBCE84AB1D373DC4000D3002 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE84AA1D373DC4000D3002 /* libstdc++.6.0.9.tbd */; };
 		CBCE84AD1D373DCC000D3002 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE84AC1D373DCC000D3002 /* libsqlite3.tbd */; };
 		CBCE84AF1D373DDC000D3002 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE84AE1D373DDC000D3002 /* libiconv.tbd */; };
+		CBCE84B71D375AF1000D3002 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84B51D375AF1000D3002 /* LoginViewController.m */; };
+		CBCE84B81D375AF1000D3002 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCE84B61D375AF1000D3002 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,9 @@
 		CBCE84AA1D373DC4000D3002 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		CBCE84AC1D373DCC000D3002 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CBCE84AE1D373DDC000D3002 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		CBCE84B41D375AF1000D3002 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CBCE84B51D375AF1000D3002 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CBCE84B61D375AF1000D3002 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +196,7 @@
 		CBCE84311D373C0B000D3002 /* ChatDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CBCE84B01D375A64000D3002 /* 登录注册 */,
 				CBCE84651D373C49000D3002 /* HyphenateFullSDK */,
 				CBCE84351D373C0B000D3002 /* AppDelegate.h */,
 				CBCE84361D373C0B000D3002 /* AppDelegate.m */,
@@ -304,6 +310,16 @@
 			path = 3rdparty;
 			sourceTree = "<group>";
 		};
+		CBCE84B01D375A64000D3002 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				CBCE84B41D375AF1000D3002 /* LoginViewController.h */,
+				CBCE84B51D375AF1000D3002 /* LoginViewController.m */,
+				CBCE84B61D375AF1000D3002 /* LoginViewController.xib */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -407,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCE84B81D375AF1000D3002 /* LoginViewController.xib in Resources */,
 				CBCE84421D373C0B000D3002 /* LaunchScreen.storyboard in Resources */,
 				CBCE843F1D373C0B000D3002 /* Assets.xcassets in Resources */,
 				CBCE843D1D373C0B000D3002 /* Main.storyboard in Resources */,
@@ -434,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCE84B71D375AF1000D3002 /* LoginViewController.m in Sources */,
 				CBCE843A1D373C0B000D3002 /* ViewController.m in Sources */,
 				CBCE84371D373C0B000D3002 /* AppDelegate.m in Sources */,
 				CBCE84341D373C0B000D3002 /* main.m in Sources */,
@@ -585,7 +603,7 @@
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib/3rdparty",
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.enterprise.demo.ui;
+				PRODUCT_BUNDLE_IDENTIFIER = jiachatDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -602,7 +620,7 @@
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib/3rdparty",
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.enterprise.demo.ui;
+				PRODUCT_BUNDLE_IDENTIFIER = jiachatDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
