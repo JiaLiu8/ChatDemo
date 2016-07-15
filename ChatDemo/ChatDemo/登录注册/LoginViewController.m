@@ -9,11 +9,13 @@
 #import "LoginViewController.h"
 #import "EMClient.h"
 #import "HomeViewController.h"
-@interface LoginViewController ()<EMClientDelegate>
+@interface LoginViewController ()<EMClientDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *passWdTF;
 - (IBAction)registerAction:(id)sender;
 - (IBAction)loginAction:(id)sender;
+- (IBAction)registerkeyboardAction:(id)sender;
+
 
 @end
 
@@ -58,6 +60,13 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     
+}
+
+- (IBAction)registerkeyboardAction:(id)sender
+{
+    
+    [self.userNameTF resignFirstResponder];
+    [self.passWdTF resignFirstResponder];
 }
 
 

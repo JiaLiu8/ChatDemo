@@ -16,7 +16,7 @@
 @property (assign, nonatomic) id<LJCommentViewDelegate>delegate;
 @property (copy, nonatomic) NSString *placeholder;    //默认文字
 @property (assign, nonatomic) CGFloat textViewFont;
-
+@property (strong, nonatomic) UIView *maskView;
++(CGFloat)getKeyBoardHeight;
 -(void)textFieldBeActive:(BOOL)isActive;
-
 @end

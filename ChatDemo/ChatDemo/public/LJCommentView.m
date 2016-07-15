@@ -11,12 +11,14 @@
 @interface LJCommentView()<UITextViewDelegate>
 {
     CGFloat maxHeight;
+    
 }
 @property (strong, nonatomic) UITextView *tv;
 @property (strong, nonatomic) UIButton *btn;
 @property (strong, nonatomic) UIView *containerView;
 @property (strong, nonatomic) UILabel *placeholderLabel;
 @end
+static CGFloat keyBoardHeight;
 @implementation LJCommentView
 -(instancetype)init
 {
@@ -31,31 +33,37 @@
 -(void)addObserver
 {
 //    will SHow
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardIsShow:) name:UIKeyboardWillShowNotification object:@1];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardIsShow:) name:UIKeyboardWillShowNotification object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardIsShow:) name:UIKeyboardWillHideNotification object:@0];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardIsShow:) name:UIKeyboardWillHideNotification object:nil];
     
     [self.tv addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
 }
 #pragma mark - 私有方法
 -(void)keyBoardIsShow:(id)object
 {
-
-    if ([object isEqual:@0])      //hidden
+    keyBoardHeight = [[[object userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    
+    if ([[object name] isEqualToString:@"UIKeyboardWillHideNotification"])      //hidden
     {
+        [self.maskView removeFromSuperview];
         if ([_delegate respondsToSelector:@selector(keyboardWillShow:)])
         {
             [_delegate keyboardWillShow:NO];
         }
     }
-    else if([object isEqual:@1]) //show
+    else //show
     {
+        [self.superview insertSubview:self.maskView belowSubview:self];
         if ([_delegate respondsToSelector:@selector(keyboardWillShow:)])
         {
             [_delegate keyboardWillShow:YES];
         }
     }
-    
+}
+-(void)hiddenKeyBoard
+{
+    [self textFieldBeActive:NO];
 }
 #pragma mark - 公共方法
 -(void)textFieldBeActive:(BOOL)isActive
@@ -68,6 +76,10 @@
     {
         [self.tv resignFirstResponder];
     }
+}
++(CGFloat)getKeyBoardHeight
+{
+    return keyBoardHeight;
 }
 #pragma mark - 配置界面
 -(void)configView
@@ -91,7 +103,7 @@
 {
     if ([keyPath isEqualToString:@"frame"]) {
         CGRect frame = self.frame;
-        frame.origin.y = Screen_Height-(self.tv.frame.size.height+10);
+        frame.origin.y = frame.origin.y-((self.tv.frame.size.height+10)-frame.size.height);
         frame.size.height = self.tv.frame.size.height+10;
         self.frame = frame;
         self.containerView.frame = self.bounds;
@@ -192,6 +204,21 @@
     }
     return _placeholderLabel;
 }
+
+-(UIView*)maskView
+{
+    if (!_maskView)
+    {
+        _maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
+        _maskView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.02];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenKeyBoard)];
+        [_maskView addGestureRecognizer:tap];
+    
+    }
+    return _maskView;
+}
+
+
 
 #pragma mark - 销毁
 -(void)dealloc

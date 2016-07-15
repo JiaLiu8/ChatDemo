@@ -441,6 +441,7 @@
 				TargetAttributes = {
 					CBCE842E1D373C0B000D3002 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FD3FY3GTVB;
 					};
 					CBCE84471D373C0C000D3002 = {
 						CreatedOnToolsVersion = 7.3;
@@ -643,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ChatDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "";
@@ -653,8 +655,9 @@
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib/3rdparty",
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jiachatDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mxr.testarglass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9dfe38e2-350f-4306-9466-10f087f6e5d6";
 			};
 			name = Debug;
 		};
@@ -662,6 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = ChatDemo/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "";
@@ -672,8 +676,9 @@
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib/3rdparty",
 					"$(PROJECT_DIR)/ChatDemo/HyphenateFullSDK/lib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jiachatDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mxr.testarglass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9dfe38e2-350f-4306-9466-10f087f6e5d6";
 			};
 			name = Release;
 		};
