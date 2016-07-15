@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "EMClient.h"
+#import "HomeViewController.h"
 @interface LoginViewController ()<EMClientDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *passWdTF;
@@ -53,6 +54,8 @@
     if (!error) {
         NSLog(@"登录成功");
         [[EMClient sharedClient].options setIsAutoLogin:YES];
+        HomeViewController *vc = [HomeViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
 }
@@ -62,7 +65,8 @@
 {
     if (aError == nil) {
 //        自动登录成功
-        
+        HomeViewController *vc = [HomeViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 @end

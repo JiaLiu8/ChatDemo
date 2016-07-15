@@ -10,7 +10,6 @@
 		CBCE84341D373C0B000D3002 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84331D373C0B000D3002 /* main.m */; };
 		CBCE84371D373C0B000D3002 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84361D373C0B000D3002 /* AppDelegate.m */; };
 		CBCE843A1D373C0B000D3002 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84391D373C0B000D3002 /* ViewController.m */; };
-		CBCE843D1D373C0B000D3002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCE843B1D373C0B000D3002 /* Main.storyboard */; };
 		CBCE843F1D373C0B000D3002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBCE843E1D373C0B000D3002 /* Assets.xcassets */; };
 		CBCE84421D373C0B000D3002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCE84401D373C0B000D3002 /* LaunchScreen.storyboard */; };
 		CBCE844D1D373C0C000D3002 /* ChatDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE844C1D373C0C000D3002 /* ChatDemoTests.m */; };
@@ -31,6 +30,9 @@
 		CBCE84AF1D373DDC000D3002 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE84AE1D373DDC000D3002 /* libiconv.tbd */; };
 		CBCE84B71D375AF1000D3002 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84B51D375AF1000D3002 /* LoginViewController.m */; };
 		CBCE84B81D375AF1000D3002 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCE84B61D375AF1000D3002 /* LoginViewController.xib */; };
+		CBCE84BF1D376986000D3002 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84BE1D376986000D3002 /* HomeViewController.m */; };
+		CBCE84C21D376AAA000D3002 /* SingleChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84C11D376AAA000D3002 /* SingleChatViewController.m */; };
+		CBCE84C91D3788EB000D3002 /* LJCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE84C81D3788EB000D3002 /* LJCommentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +59,6 @@
 		CBCE84361D373C0B000D3002 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CBCE84381D373C0B000D3002 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CBCE84391D373C0B000D3002 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CBCE843C1D373C0B000D3002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBCE843E1D373C0B000D3002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBCE84411D373C0B000D3002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBCE84431D373C0B000D3002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +123,13 @@
 		CBCE84B41D375AF1000D3002 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CBCE84B51D375AF1000D3002 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CBCE84B61D375AF1000D3002 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CBCE84BD1D376986000D3002 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		CBCE84BE1D376986000D3002 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		CBCE84C01D376AAA000D3002 /* SingleChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChatViewController.h; sourceTree = "<group>"; };
+		CBCE84C11D376AAA000D3002 /* SingleChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChatViewController.m; sourceTree = "<group>"; };
+		CBCE84C71D3788EB000D3002 /* LJCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCommentView.h; sourceTree = "<group>"; };
+		CBCE84C81D3788EB000D3002 /* LJCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCommentView.m; sourceTree = "<group>"; };
+		CBCE84CA1D3789D2000D3002 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,17 +204,21 @@
 		CBCE84311D373C0B000D3002 /* ChatDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CBCE84C61D3788C6000D3002 /* public */,
+				CBCE84B91D3768F7000D3002 /* chat */,
 				CBCE84B01D375A64000D3002 /* 登录注册 */,
 				CBCE84651D373C49000D3002 /* HyphenateFullSDK */,
 				CBCE84351D373C0B000D3002 /* AppDelegate.h */,
 				CBCE84361D373C0B000D3002 /* AppDelegate.m */,
 				CBCE84381D373C0B000D3002 /* ViewController.h */,
 				CBCE84391D373C0B000D3002 /* ViewController.m */,
-				CBCE843B1D373C0B000D3002 /* Main.storyboard */,
 				CBCE843E1D373C0B000D3002 /* Assets.xcassets */,
 				CBCE84401D373C0B000D3002 /* LaunchScreen.storyboard */,
 				CBCE84431D373C0B000D3002 /* Info.plist */,
 				CBCE84321D373C0B000D3002 /* Supporting Files */,
+				CBCE84BD1D376986000D3002 /* HomeViewController.h */,
+				CBCE84BE1D376986000D3002 /* HomeViewController.m */,
+				CBCE84CA1D3789D2000D3002 /* PrefixHeader.pch */,
 			);
 			path = ChatDemo;
 			sourceTree = "<group>";
@@ -320,6 +332,48 @@
 			path = "登录注册";
 			sourceTree = "<group>";
 		};
+		CBCE84B91D3768F7000D3002 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				CBCE84BA1D376955000D3002 /* Controller */,
+				CBCE84BB1D376955000D3002 /* Model */,
+				CBCE84BC1D376955000D3002 /* View */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		CBCE84BA1D376955000D3002 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CBCE84BB1D376955000D3002 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBCE84BC1D376955000D3002 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBCE84C01D376AAA000D3002 /* SingleChatViewController.h */,
+				CBCE84C11D376AAA000D3002 /* SingleChatViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CBCE84C61D3788C6000D3002 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				CBCE84C71D3788EB000D3002 /* LJCommentView.h */,
+				CBCE84C81D3788EB000D3002 /* LJCommentView.m */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -426,7 +480,6 @@
 				CBCE84B81D375AF1000D3002 /* LoginViewController.xib in Resources */,
 				CBCE84421D373C0B000D3002 /* LaunchScreen.storyboard in Resources */,
 				CBCE843F1D373C0B000D3002 /* Assets.xcassets in Resources */,
-				CBCE843D1D373C0B000D3002 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,9 +504,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCE84C21D376AAA000D3002 /* SingleChatViewController.m in Sources */,
 				CBCE84B71D375AF1000D3002 /* LoginViewController.m in Sources */,
 				CBCE843A1D373C0B000D3002 /* ViewController.m in Sources */,
+				CBCE84C91D3788EB000D3002 /* LJCommentView.m in Sources */,
 				CBCE84371D373C0B000D3002 /* AppDelegate.m in Sources */,
+				CBCE84BF1D376986000D3002 /* HomeViewController.m in Sources */,
 				CBCE84341D373C0B000D3002 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,14 +546,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CBCE843B1D373C0B000D3002 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBCE843C1D373C0B000D3002 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CBCE84401D373C0B000D3002 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -596,6 +644,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = ChatDemo/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ChatDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -613,6 +663,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = ChatDemo/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ChatDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -690,6 +742,7 @@
 				CBCE845E1D373C0C000D3002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBCE845F1D373C0C000D3002 /* Build configuration list for PBXNativeTarget "ChatDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -698,6 +751,7 @@
 				CBCE84611D373C0C000D3002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBCE84621D373C0C000D3002 /* Build configuration list for PBXNativeTarget "ChatDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +760,7 @@
 				CBCE84641D373C0C000D3002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

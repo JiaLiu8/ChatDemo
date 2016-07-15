@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  ChatDemo
+//
+//  Created by lj on 16/7/14.
+//  Copyright © 2016年 liujia. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define Screen_Height ([[UIScreen mainScreen] bounds].size.height)
+#define Screen_Width ([[UIScreen mainScreen] bounds].size.width)
+#endif /* PrefixHeader_pch */
+#define Screen_Height ([[UIScreen mainScreen] bounds].size.height)
+#define Screen_Width ([[UIScreen mainScreen] bounds].size.width)
