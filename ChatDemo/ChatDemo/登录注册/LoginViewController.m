@@ -47,10 +47,10 @@
 - (IBAction)loginAction:(id)sender {
     
 //    已经让程序自动登录 则不需要再次登录
-    if([EMClient sharedClient].options.isAutoLogin)
-    {
-        return;
-    }
+//    if([EMClient sharedClient].options.isAutoLogin)
+//    {
+//        return;
+//    }
     
     EMError *error = [[EMClient sharedClient] loginWithUsername:_userNameTF.text password:_passWdTF.text];
     if (!error) {

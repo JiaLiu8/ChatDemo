@@ -124,8 +124,6 @@ static CGFloat keyBoardHeight;
 - (void)textViewDidChange:(UITextView *)textView
 {
     CGFloat height = ceilf([self.tv sizeThatFits:self.tv.frame.size].height);
-    
-    
     if (((height>self.tv.frame.size.height) && (height<=maxHeight))||(height<self.tv.frame.size.height))
     {
         CGRect frame = self.tv.frame;
@@ -153,10 +151,11 @@ static CGFloat keyBoardHeight;
 {
     _textViewFont = textViewFont;
 //    根据字体算出最大高度
-    self.tv.text = @"x\ns\nsda";
-    maxHeight = ceilf([self.tv sizeThatFits:self.tv.frame.size].height);
-    self.tv.text = @"";
     self.tv.font = [UIFont systemFontOfSize:textViewFont];
+    self.tv.text = @"x \n s \n sda";
+    maxHeight = ceilf([self.tv sizeThatFits:CGSizeMake(self.tv.frame.size.width, MAXFLOAT)].height);
+    self.tv.text = @"";
+    
 }
 #pragma mark - getter
 -(UITextView*)tv
@@ -167,8 +166,6 @@ static CGFloat keyBoardHeight;
         self.textViewFont = 15.0f;
         _tv.layer.borderColor = [UIColor redColor].CGColor;
         _tv.layer.borderWidth = 0.5;
-        NSLog(@"_%f_%f",_tv.contentInset.top,_tv.contentInset.bottom);
-//        _tv.contentInset = UIEdgeInsetsMake(0, 5, 0, 0);
     }
     return _tv;
 }
@@ -218,7 +215,10 @@ static CGFloat keyBoardHeight;
     return _maskView;
 }
 
-
+-(NSString*)textViewText
+{
+    return self.tv.text;
+}
 
 #pragma mark - 销毁
 -(void)dealloc

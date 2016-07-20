@@ -43,10 +43,30 @@
     UITableViewCell *cell;
     return cell;
 }
+#pragma mark - 私有方法
+-(EMMessage*)createMessage
+{
+    EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithText:@"要发送的消息"];
+    NSString *from = [[EMClient sharedClient] currentUsername];
+    
+    //生成Message
+    EMMessage *message = [[EMMessage alloc] initWithConversationID:@"jialiu" from:from to:@"6001" body:body ext:nil];
+    message.chatType = EMChatTypeChat;// 设置为单聊消息
+    //message.chatType = EMChatTypeGroupChat;// 设置为群聊消息
+    //message.chatType = EMChatTypeChatRoom;// 设置为聊天室消息
+    return message;
+}
+-(void)sendMessage:(EMMessage*)message
+{
+    [[EMClient sharedClient].chatManager asyncSendMessage:message progress:nil completion:^(EMMessage *aMessage, EMError *aError) {
+        NSLog(@"123");
+    }];
+}
 #pragma mark - LJCommentView代理
 -(void)sendAction:(id)sender
 {
-    
+    EMMessage *message = [self createMessage];
+    [self sendMessage:message];
 }
 -(void)keyboardWillShow:(BOOL)isShow
 {
